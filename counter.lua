@@ -11,5 +11,5 @@ if not ok then
 end  
 --local response = instance:ping();
 local counter=instance:incr("zqfcounter");  
-ngx.header.content_type = "text/html";
+ngx.header.content_type = "text/html;charset=UTF-8";
 ngx.say("网站访问次数:",counter);
