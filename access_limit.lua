@@ -7,7 +7,7 @@ local function close_redis(redis)
     local ok, err = redis:set_keepalive(pool_max_idle_time, pool_size)
 
     if not ok then
-        ngx_log(ngx_ERR, "set redis keepalive error : ", err)
+        ngx.log(ngx.ERR, "set redis keepalive error : ")
     end
 end
 
